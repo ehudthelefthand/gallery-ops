@@ -30,6 +30,8 @@ services:
       - "./upload:/app/upload"
     depends_on: 
       - db
+    links:
+      - db
   web:
     build: ../gallery
     container_name: gallery-web
